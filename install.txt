@@ -1,0 +1,14 @@
+Para instlar primero en la carpeteria principal 
+./llantucha> npm install
+
+luego instalar las librerias para el back end
+./llantucha>cd /backend
+./llantucha/backend>npm install express cors mongosee dotenv
+./llantucha/backend>npm install -g nodemon
+
+Luego se levanta el servidor
+./llantucha/backend>nodemon server 
+
+y el front end
+
+./llantucha>npm start 
