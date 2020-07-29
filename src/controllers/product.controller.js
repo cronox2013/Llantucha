@@ -1,16 +1,15 @@
-import { getData, PRUEBA, PRODUCTS, CATEGORIES } from "./productData";
+import { getData,PRODUCTS, CATEGORIES } from "./productData";
 
-export function getProductsByCategory(category) {
-  return PRODUCTS.filter(r => r.category === category);
+export async function getProductsByCategory(category) {
+  return (await getData()).filter(r => r.category === category);
 }
 
-export function getProductById(id) {
-  return PRODUCTS.find(r => r.id === id);
+export async function getProductById(_id) {
+  return (await getData()).find(r => r._id === _id);
 }
 
-export function getProducts() {
-  console.log(PRUEBA());
-  return PRODUCTS;
+export async function getProducts() {
+  return await getData();
 }
 
 export function getCategories() {
